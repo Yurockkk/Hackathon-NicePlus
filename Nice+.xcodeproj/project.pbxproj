@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		02EE55FF3B509C9E8D256BE7 /* Pods_Nice_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202E2EBEA85B483FF7B8D504 /* Pods_Nice_.framework */; };
+		3AFD3F171FB8AA78006E09A4 /* NPStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD3F161FB8AA78006E09A4 /* NPStartViewController.swift */; };
+		3AFD3F191FB8AA99006E09A4 /* NPDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD3F181FB8AA99006E09A4 /* NPDataViewController.swift */; };
 		9975465F1FB7BF9F00DCD71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9975465E1FB7BF9F00DCD71C /* AppDelegate.swift */; };
 		997546611FB7BF9F00DCD71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997546601FB7BF9F00DCD71C /* ViewController.swift */; };
 		997546641FB7BF9F00DCD71C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997546621FB7BF9F00DCD71C /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 		1C100C16ED3E11FF70EE5906 /* Pods-Nice+.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nice+.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nice+/Pods-Nice+.debug.xcconfig"; sourceTree = "<group>"; };
 		202E2EBEA85B483FF7B8D504 /* Pods_Nice_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nice_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		395224F964DAF50DE93FCF5D /* Pods-Nice+.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nice+.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nice+/Pods-Nice+.release.xcconfig"; sourceTree = "<group>"; };
+		3AFD3F161FB8AA78006E09A4 /* NPStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPStartViewController.swift; sourceTree = "<group>"; };
+		3AFD3F181FB8AA99006E09A4 /* NPDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPDataViewController.swift; sourceTree = "<group>"; };
 		9975465B1FB7BF9F00DCD71C /* Nice+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nice+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9975465E1FB7BF9F00DCD71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		997546601FB7BF9F00DCD71C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 			children = (
 				9975465E1FB7BF9F00DCD71C /* AppDelegate.swift */,
 				997546601FB7BF9F00DCD71C /* ViewController.swift */,
+				3AFD3F161FB8AA78006E09A4 /* NPStartViewController.swift */,
+				3AFD3F181FB8AA99006E09A4 /* NPDataViewController.swift */,
 				997546621FB7BF9F00DCD71C /* Main.storyboard */,
 				997546651FB7BF9F00DCD71C /* Assets.xcassets */,
 				997546671FB7BF9F00DCD71C /* LaunchScreen.storyboard */,
@@ -227,6 +233,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AFD3F191FB8AA99006E09A4 /* NPDataViewController.swift in Sources */,
+				3AFD3F171FB8AA78006E09A4 /* NPStartViewController.swift in Sources */,
 				997546611FB7BF9F00DCD71C /* ViewController.swift in Sources */,
 				9975465F1FB7BF9F00DCD71C /* AppDelegate.swift in Sources */,
 			);
