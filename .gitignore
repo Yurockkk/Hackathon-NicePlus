@@ -1,0 +1,8 @@
+Pods/
+Podfile.lock
+DerivedData
+xcuserdata/
+build/
+
+*.xcworkspace
+*.xcworkspace/*

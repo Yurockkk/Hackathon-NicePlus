@@ -1,6 +1,0 @@
-framework module Pods_Nice_ {
-  umbrella header "Pods-Nice+-umbrella.h"
-
-  export *
-  module * { export * }
-}
