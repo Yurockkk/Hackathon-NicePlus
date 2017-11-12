@@ -50,10 +50,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0KO-97-27v">
-                                <rect key="frame" x="0.0" y="170" width="375" height="497"/>
+                                <rect key="frame" x="0.0" y="190" width="375" height="477"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NPTextCell" rowHeight="120" id="A1J-CD-JWV" customClass="NPTextCell" customModule="Nice_" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NPTextCell" rowHeight="120" id="A1J-CD-JWV" customClass="NPTextCell" customModule="Nice_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A1J-CD-JWV" id="1mW-95-tkw">
@@ -111,7 +111,7 @@
                             <constraint firstItem="0KO-97-27v" firstAttribute="centerX" secondItem="evB-rz-B0Q" secondAttribute="centerX" id="Wt5-xY-a50"/>
                             <constraint firstItem="0KO-97-27v" firstAttribute="leading" secondItem="evB-rz-B0Q" secondAttribute="leading" id="cGl-JL-QTg"/>
                             <constraint firstItem="YWB-WS-FJv" firstAttribute="centerX" secondItem="evB-rz-B0Q" secondAttribute="centerX" id="gtl-em-tdU"/>
-                            <constraint firstItem="0KO-97-27v" firstAttribute="top" secondItem="evB-rz-B0Q" secondAttribute="top" constant="150" id="hgB-d7-JOt"/>
+                            <constraint firstItem="0KO-97-27v" firstAttribute="top" secondItem="evB-rz-B0Q" secondAttribute="top" constant="170" id="hgB-d7-JOt"/>
                             <constraint firstItem="kBp-Gz-a2G" firstAttribute="top" secondItem="YWB-WS-FJv" secondAttribute="bottom" constant="8" id="j1c-Gn-ayJ"/>
                             <constraint firstItem="YWB-WS-FJv" firstAttribute="top" secondItem="evB-rz-B0Q" secondAttribute="top" id="tJx-2t-m5c"/>
                         </constraints>

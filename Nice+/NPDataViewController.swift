@@ -34,6 +34,7 @@ class NPDataViewController: UIViewController {
         
         self.fetchUserImage()
         self.refreshData()
+        //self.shareButton.addTarget(self, action: #selector(self.shareData), for: .touchUpInside)
     }
     
     @objc private func refreshData() {
@@ -245,7 +246,13 @@ extension NPDataViewController {
 }
 
 extension NPDataViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let score = self.scoreArr[indexPath.row]
+        let alertViewController = UIAlertController(title: "Sentiment Analysis Score", message: "This post's score is \(score)", preferredStyle: .alert)
+        let actionA = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertViewController.addAction(actionA)
+        self.present(alertViewController, animated: true, completion: nil)
+    }
 }
 
 extension NPDataViewController: UITableViewDataSource {
