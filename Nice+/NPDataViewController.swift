@@ -63,9 +63,9 @@ class NPDataViewController: UIViewController {
                     self.fetchSetimentScore(text: item.element, completion: {
                         content, score in
                         self.scoreArr[item.offset] = score
+                        self.dataTableView.reloadData()
                     })
                 }
-                self.dataTableView.reloadData()
             case .failed(let error):
                 print("Failed to request user profile: \(error.localizedDescription)")
             }
@@ -263,6 +263,7 @@ extension NPDataViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NPTextCell", for: indexPath) as! NPTextCell
         cell.postTextLabel.text = self.postArr[indexPath.row]
+        cell.actionButton.layer.cornerRadius = 10
         let score = self.scoreArr[indexPath.row]
         if score <= 1.0 && score >= 0.75 {
             cell.actionButton.isHidden = true
