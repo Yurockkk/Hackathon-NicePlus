@@ -20,13 +20,13 @@ class ViewController: UIViewController {
         let post = "DT SCREW YOU!!! DT LOVE YOU!! DT EAT MY SHIT!! DT is the best!"
         
         self.fetchSentimentScore(inputString: post,completion: {
-            results in
-            print("\(post) -> score: \(results)")
+            (content, score) in
+            print("\(content) -> score: \(score)")
         })
 
     }
     
-    func fetchSentimentScore(inputString: String, completion: @escaping (Double)-> Void) {
+    func fetchSentimentScore(inputString: String, completion: @escaping (_ negativeContent: String, _ score: Double)-> Void) {
         let text = inputString
         let parameters: Parameters = [
             "document": [
@@ -43,28 +43,46 @@ class ViewController: UIViewController {
             }
 //            print(datalevel1)
 
-            guard let dataLevel2 = datalevel1["documentSentiment"] as? [String: Any] else{
+            guard let dataLevel2 = datalevel1["sentences"] as? [[String: Any]] else{
                 print("error2")
                 return
             }
 //            print(dataLevel2)
             
-            guard let score = dataLevel2["score"] as? Double else{
-                return
-            }
+//            guard let score = dataLevel2["score"] as? Double else{
+//                return
+//            }
             
             //printout each sentence
-//            dataLevel2.forEach{ sentence in
+            var mostNegativeContent = ""
+            var mostNegativeScore = 100.0
+            
+            dataLevel2.forEach{ sentence in
 //                print(sentence)
-//                guard let scoreTuple = sentence["sentiment"] as? [String: Any] else{
-//                    return
-//                }
-//                guard let score = scoreTuple["score"] as? Double else {
-//                    return
-//                }
-//
-//                print(score)
-//            }
+                guard let scoreTuple = sentence["sentiment"] as? [String: Any] else{
+                    print("error scoreTuple")
+
+                    return
+                }
+                guard let score = scoreTuple["score"] as? Double else {
+                    print("error score")
+
+                    return
+                }
+                guard let textTuple = sentence["text"] as? [String: Any] else{
+                    print("error textTuple")
+                    return
+                }
+                guard let text = textTuple["content"] as? String else{
+                    print("error text")
+                    return
+                }
+                if(score < mostNegativeScore){
+                    mostNegativeScore = score
+                    mostNegativeContent = text
+                }
+                print("\(text) : \(score)")
+            }
             
 //            guard let dataLevel3 = dataLevel2[0]["sentiment"] as? [String: Any] else{
 //                print("error3")
@@ -77,10 +95,8 @@ class ViewController: UIViewController {
             
 //            print(scores)
             
-            completion(score)
+            completion(mostNegativeContent,mostNegativeScore)
             })
-        
-        
     }
     
 
