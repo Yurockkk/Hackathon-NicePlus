@@ -265,15 +265,20 @@ extension NPDataViewController: UITableViewDataSource {
         cell.postTextLabel.text = self.postArr[indexPath.row]
         let score = self.scoreArr[indexPath.row]
         if score <= 1.0 && score >= 0.75 {
+            cell.actionButton.isHidden = true
             cell.backgroundColor = kGreenColor
         } else if score < 0.75 && score >= 0.25 {
+            cell.actionButton.isHidden = true
             cell.backgroundColor = kLightGreenColor
         } else if score < 0.25 && score >= -0.25 {
             cell.backgroundColor = kYellowColor
+            cell.actionButton.isHidden = false
         } else if score < -0.25 && score >= -0.75 {
             cell.backgroundColor = kLightRedColor
+            cell.actionButton.isHidden = false
         } else {
             cell.backgroundColor = kRedColor
+            cell.actionButton.isHidden = false
         }
         return cell
     }
