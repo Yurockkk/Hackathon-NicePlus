@@ -61,21 +61,31 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hK5-58-P5M">
-                                                    <rect key="frame" x="15" y="10" width="345" height="98"/>
+                                                    <rect key="frame" x="15" y="10" width="345" height="51.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuN-hQ-7dL">
+                                                    <rect key="frame" x="165" y="69.5" width="44" height="30"/>
+                                                    <color key="backgroundColor" red="0.29411764709999999" green="0.79607843140000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Action">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="hK5-58-P5M" firstAttribute="top" secondItem="1mW-95-tkw" secondAttribute="top" constant="10" id="22n-zt-VMe"/>
-                                                <constraint firstItem="hK5-58-P5M" firstAttribute="centerY" secondItem="1mW-95-tkw" secondAttribute="centerY" id="jaI-NG-yTT"/>
+                                                <constraint firstItem="YuN-hQ-7dL" firstAttribute="centerX" secondItem="1mW-95-tkw" secondAttribute="centerX" id="5xY-g6-d7y"/>
+                                                <constraint firstAttribute="bottom" secondItem="YuN-hQ-7dL" secondAttribute="bottom" constant="20" symbolic="YES" id="D0G-aL-uas"/>
+                                                <constraint firstItem="YuN-hQ-7dL" firstAttribute="top" secondItem="hK5-58-P5M" secondAttribute="bottom" constant="8" symbolic="YES" id="X0K-Ob-NeU"/>
                                                 <constraint firstItem="hK5-58-P5M" firstAttribute="centerX" secondItem="1mW-95-tkw" secondAttribute="centerX" id="lAR-VK-IgZ"/>
                                                 <constraint firstAttribute="trailing" secondItem="hK5-58-P5M" secondAttribute="trailing" constant="15" id="zNp-Pc-LZE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.29411764709999999" green="0.79607843140000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="actionButton" destination="YuN-hQ-7dL" id="9mz-fa-JYU"/>
                                             <outlet property="postTextLabel" destination="hK5-58-P5M" id="QFG-li-b7Y"/>
                                         </connections>
                                     </tableViewCell>
@@ -93,10 +103,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBp-Gz-a2G">
-                                <rect key="frame" x="97.5" y="128" width="180" height="21"/>
+                                <rect key="frame" x="169" y="128" width="37.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="F3Q-zT-0Pt"/>
-                                    <constraint firstAttribute="width" constant="180" id="u5Y-gO-Azn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
