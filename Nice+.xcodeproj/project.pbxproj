@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02EE55FF3B509C9E8D256BE7 /* Pods_Nice_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202E2EBEA85B483FF7B8D504 /* Pods_Nice_.framework */; };
 		9975465F1FB7BF9F00DCD71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9975465E1FB7BF9F00DCD71C /* AppDelegate.swift */; };
 		997546611FB7BF9F00DCD71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997546601FB7BF9F00DCD71C /* ViewController.swift */; };
 		997546641FB7BF9F00DCD71C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997546621FB7BF9F00DCD71C /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C100C16ED3E11FF70EE5906 /* Pods-Nice+.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nice+.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nice+/Pods-Nice+.debug.xcconfig"; sourceTree = "<group>"; };
+		202E2EBEA85B483FF7B8D504 /* Pods_Nice_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nice_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		395224F964DAF50DE93FCF5D /* Pods-Nice+.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nice+.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nice+/Pods-Nice+.release.xcconfig"; sourceTree = "<group>"; };
 		9975465B1FB7BF9F00DCD71C /* Nice+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nice+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9975465E1FB7BF9F00DCD71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		997546601FB7BF9F00DCD71C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02EE55FF3B509C9E8D256BE7 /* Pods_Nice_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A2D1997007F5A7A1C4151B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				202E2EBEA85B483FF7B8D504 /* Pods_Nice_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3EC8DCA58E8E99E52924F8F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C100C16ED3E11FF70EE5906 /* Pods-Nice+.debug.xcconfig */,
+				395224F964DAF50DE93FCF5D /* Pods-Nice+.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		997546521FB7BF9E00DCD71C = {
 			isa = PBXGroup;
 			children = (
 				9975465D1FB7BF9F00DCD71C /* Nice+ */,
 				9975465C1FB7BF9F00DCD71C /* Products */,
+				3EC8DCA58E8E99E52924F8F2 /* Pods */,
+				3A2D1997007F5A7A1C4151B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9975466D1FB7BF9F00DCD71C /* Build configuration list for PBXNativeTarget "Nice+" */;
 			buildPhases = (
+				CCCA64FE2B9EA400EC7929EB /* [CP] Check Pods Manifest.lock */,
 				997546571FB7BF9E00DCD71C /* Sources */,
 				997546581FB7BF9E00DCD71C /* Frameworks */,
 				997546591FB7BF9E00DCD71C /* Resources */,
+				093180F602AD2B1B9D99585E /* [CP] Embed Pods Frameworks */,
+				C4AB0B2DF0F0FB4249F34442 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		093180F602AD2B1B9D99585E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Nice+/Pods-Nice+-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nice+/Pods-Nice+-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4AB0B2DF0F0FB4249F34442 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nice+/Pods-Nice+-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCCA64FE2B9EA400EC7929EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nice+-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		997546571FB7BF9E00DCD71C /* Sources */ = {
@@ -272,6 +363,7 @@
 		};
 		9975466E1FB7BF9F00DCD71C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C100C16ED3E11FF70EE5906 /* Pods-Nice+.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +378,7 @@
 		};
 		9975466F1FB7BF9F00DCD71C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 395224F964DAF50DE93FCF5D /* Pods-Nice+.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
