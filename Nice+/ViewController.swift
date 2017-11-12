@@ -13,7 +13,6 @@ import FacebookLogin
 
 class ViewController: UIViewController {
     
-    
 
     lazy var loginButton: LoginButton = {
         return LoginButton(readPermissions: [.publicProfile, .email, .userFriends, .userPosts])
@@ -48,19 +47,13 @@ class ViewController: UIViewController {
                 print("Error")
                 return
             }
-//            print(datalevel1)
+
 
             guard let dataLevel2 = datalevel1["sentences"] as? [[String: Any]] else{
                 print("error2")
                 return
             }
-//            print(dataLevel2)
-            
-//            guard let score = dataLevel2["score"] as? Double else{
-//                return
-//            }
-            
-            //printout each sentence
+
             var mostNegativeContent = ""
             var mostNegativeScore = 100.0
             
@@ -118,10 +111,6 @@ class ViewController: UIViewController {
             response, result in
             switch result {
             case .success(response: let _response):
-//                print("ID Counts: \(_response.postIDs.count)")
-//                print(_response.postIDs)
-//                print("Msg Counts: \(_response.postMsgs.count)")
-//                print(_response.postMsgs)
                 // Test Using PostID to fetch comments
                 self.fetchComments(postID: _response.postIDs[0])
             case .failed(let error):
