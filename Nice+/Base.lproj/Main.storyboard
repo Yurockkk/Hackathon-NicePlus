@@ -18,21 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ij4-dA-sm3">
-                                <rect key="frame" x="147" y="617" width="81" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="toDAtaPage"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ij4-dA-sm3">
+                                <rect key="frame" x="123" y="617" width="130" height="30"/>
+                                <state key="normal" title="Press To Be Nice+!"/>
                                 <connections>
                                     <segue destination="sHB-bh-i1c" kind="show" id="VcV-mG-zBM"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ij4-dA-sm3" secondAttribute="bottom" constant="20" id="f1I-9A-XZy"/>
+                            <constraint firstItem="ij4-dA-sm3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mt3-da-00z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="segueButton" destination="ij4-dA-sm3" id="NkV-bO-rGf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="644" y="134"/>
         </scene>
         <!--Data View Controller-->
         <scene sceneID="6b6-10-Ffd">
@@ -47,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zeo-VU-osD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1423" y="54"/>
+            <point key="canvasLocation" x="1494" y="134"/>
         </scene>
     </scenes>
 </document>
